@@ -5,7 +5,7 @@ import {CourseService} from "../services/course.service";
   selector: 'app-course-card',
   templateUrl: './course-card.component.html',
   styleUrls: ['./course-card.component.css'],
-  providers: [CourseService]
+  // providers: [CourseService]
 })
 export class CourseCardComponent {
 

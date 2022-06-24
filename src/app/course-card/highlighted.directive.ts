@@ -1,4 +1,4 @@
-import {Directive, Host} from '@angular/core';
+import {Directive, Host, Optional} from '@angular/core';
 import {CourseService} from "../services/course.service";
 
 @Directive({
@@ -6,8 +6,8 @@ import {CourseService} from "../services/course.service";
 })
 export class HighlightedDirective {
 
-  constructor(@Host() private courseService: CourseService) {
-    console.log('coursesService highlighted ' + courseService.id)
+  constructor(@Optional() @Host() private courseService: CourseService) {
+    console.log('coursesService highlighted ' + courseService?.id)
   }
 
 }

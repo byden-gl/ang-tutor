@@ -1,9 +1,13 @@
 import {LibService} from "./lib.service";
 import {Injectable} from "@angular/core";
+import {CoursesModule} from "../course-card/courses.module";
 
 let counter = 0;
 
-@Injectable()
+@Injectable({
+  providedIn: CoursesModule
+  // providedIn: 'root'
+})
 export class CourseService {
   public id: number;
   public libService: LibService;
