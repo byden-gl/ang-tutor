@@ -6,7 +6,7 @@ import {LibService} from "./services/lib.service";
 import { ChooseQuantityComponent } from './choose-quantity/choose-quantity.component';
 // import { CourseCardComponent } from './course-card/course-card.component';
 import {CoursesModule} from "./course-card/courses.module";
-import {CourseService} from "./services/course.service";
+// import {CourseService} from "./services/course.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +20,7 @@ import {CourseService} from "./services/course.service";
   ],
   providers: [
     LibService,
-    CourseService
+    // CourseService
   ],
   bootstrap: [AppComponent]
 })

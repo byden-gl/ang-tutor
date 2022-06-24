@@ -1,4 +1,4 @@
-import {Component, Inject, OnInit} from '@angular/core';
+import {Component, OnInit, Optional} from '@angular/core';
 import {CourseService} from "./services/course.service";
 
 @Component({
@@ -18,11 +18,15 @@ export class AppComponent implements OnInit{
     {courseId: 7},
   ];
 
-  constructor(private courseService: CourseService) {
-    courseService.libService.meetService();
+  constructor(@Optional() private courseService: CourseService) {
+    if (courseService) {
+      courseService.libService.meetService();
+    }
   }
 
   ngOnInit(): void {
-    console.log(`this instance of CourseService in AppComponent: ${this.courseService.id}`);
+    if (this.courseService) {
+      console.log(`this instance of CourseService in AppComponent: ${this.courseService.id}`);
+    }
   }
 }
