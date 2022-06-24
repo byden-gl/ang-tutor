@@ -6,10 +6,12 @@ import {COURSE_SERVICE_TOKEN} from "./providers/course-service-token";
 import {coursesServiceProviderFactory} from "./providers/courses-provider";
 import {LibService} from "./services/lib.service";
 import {CourseService} from "./services/course.service";
+import { ChooseQuantityComponent } from './choose-quantity/choose-quantity.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChooseQuantityComponent
   ],
   imports: [
     BrowserModule
