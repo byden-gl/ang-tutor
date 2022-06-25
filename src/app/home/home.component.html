@@ -1,0 +1,7 @@
+<!--<app-newsletter [user]="user" (subscribe)="subscribe($event)"></app-newsletter>-->
+<!--<app-newsletter [user]="userService.user$ | async" (subscribe)="subscribe($event)"></app-newsletter>-->
+<!--<app-newsletter [user$]="userService.user$" (subscribe)="subscribe($event)"></app-newsletter>-->
+<app-some>
+  <app-newsletter></app-newsletter>
+</app-some>
+<button (click)="changeUserName()">Change User Name</button>
